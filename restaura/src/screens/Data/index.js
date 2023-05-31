@@ -10,7 +10,7 @@ export default () => {
             </Text>
         </Container>
     );
-}sdfsdf
+}
 
 
 const styles = StyleSheet.create ({
