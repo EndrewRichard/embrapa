@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components/native';
+import { useNavigation } from '@react-navigation/native';
 
 const Area = styled.TouchableOpacity`
     background-color: #02971f;
@@ -51,8 +52,21 @@ const Infos = styled.Text`
 
 
 export default ({data}) => {
+    const navigation = useNavigation();
+    const handleClick = () =>{
+        navigation.navigate('Data',{
+            nome: data.NOME_VULGAR,
+            especie: data.ESPECIE,
+            link: data.LINK,
+            autor: data.AUTOR,
+            nome_vulgar: data.NOME_VULGAR
+        });
+
+
+    }
+
     return (
-        <Area>
+        <Area onPress={handleClick}>
             <InfoArea>
                 <UserName>{data.ESPECIE}</UserName>
                 <Infos>Nome: {data.NOME_VULGAR}</Infos>

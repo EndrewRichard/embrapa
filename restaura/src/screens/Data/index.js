@@ -6,11 +6,11 @@ export default () => {
     return (
         <Container>
             <Text>
-                tutorial
+                Data
             </Text>
         </Container>
     );
-}
+}sdfsdf
 
 
 const styles = StyleSheet.create ({

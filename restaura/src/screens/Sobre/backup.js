@@ -7,6 +7,10 @@ import { useNavigation } from '@react-navigation/native';
 
 export default () => {
 
+  class App extends Component {
+    state = {
+      modalVisible: false,
+    };
 
       return(
         <Container>
@@ -57,6 +61,32 @@ export default () => {
                nome do cara
             </Text>
 
+        <View style={styles.centeredView}>
+        <Modal
+          animationType="slide"
+          transparent={true}
+          visible={modalVisible}
+          onRequestClose={() => {
+            Alert.alert('Modal has been closed.');
+            this.setState({modalVisible: !modalVisible});
+          }}>
+          <View style={styles.centeredView}>
+            <View style={styles.modalView}>
+              <Text style={styles.modalText}>Hello World!</Text>
+              <Pressable
+                style={[styles.button, styles.buttonClose]}
+                onPress={() => this.setState({modalVisible: !modalVisible})}>
+                <Text style={styles.textStyle}>Hide Modal</Text>
+              </Pressable>
+            </View>
+          </View>
+        </Modal>
+        <Pressable
+          style={[styles.button, styles.buttonOpen]}
+          onPress={() => this.setState({modalVisible: true})}>
+          <Text style={styles.textStyle}>Show Modal</Text>
+        </Pressable>
+      </View>
 
                   
 
@@ -74,7 +104,6 @@ export default () => {
             /> 
             </Scroller>
         </Container>
-      );
-}
+    );}}
 
 

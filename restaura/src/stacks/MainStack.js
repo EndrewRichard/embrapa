@@ -6,6 +6,7 @@ import Preload from '../screens/Preload';
 import Menu from '../screens/Catalogo';
 import MainTab from './MainTab';
 import Catalogo from '../screens/Catalogo';
+import Data from '../screens/Data';
 
 const Stack = createStackNavigator();
 
@@ -23,6 +24,7 @@ export default () => (
         <Stack.Screen name="Preload" component={Preload} />
         <Stack.Screen name="Catalogo" component={Catalogo} />
         <Stack.Screen name='MainTab' component={MainTab} />
+        <Stack.Screen name="Data" component={Data} />
   
     </Stack.Navigator>
 
