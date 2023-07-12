@@ -59,7 +59,8 @@ export default ({data}) => {
             especie: data.ESPECIE,
             link: data.LINK,
             autor: data.AUTOR,
-            nome_vulgar: data.NOME_VULGAR
+
+    
         });
 
 

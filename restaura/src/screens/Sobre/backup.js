@@ -107,3 +107,45 @@ export default () => {
     );}}
 
 
+    import React, {useState, useEffect} from 'react'; 
+import { Text } from 'react-native';
+import { Container } from './style';
+import { useNavigation, useRoute } from '@react-navigation/native';
+import { NomeArea, FakeSwiper, Scroller, PageBody, InfoArea, CarrosselArea, SwipeDotActive, SwipeDot } from '../Data/style';
+
+export default () => {
+    const navigation = useNavigation();
+    const route = useRoute();
+
+    const [userInfo, setUserInfo] = useState({
+        nome: route.params.nome,
+        especie: route.params.especie,
+        link: route.params.link,
+        autor: route.params.autor
+    });
+
+
+    return (
+    <Container>
+      <Scroller>
+        <FakeSwiper></FakeSwiper>
+
+        <PageBody>
+            <NomeArea>
+               {userInfo.nome}
+               {userInfo.especie} 
+               {userInfo.autor} 
+               {userInfo.link}  
+
+
+            </NomeArea>
+            <InfoArea></InfoArea>
+            <CarrosselArea></CarrosselArea>
+
+        </PageBody>
+
+      </Scroller>
+    </Container>
+    );
+}
+

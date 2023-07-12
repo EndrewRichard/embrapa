@@ -6,10 +6,8 @@ export default () => {
     return (
         <Container>
             <Text>
-                tutorial
+                favoritos
             </Text>
         </Container>
     );
 }
-
-

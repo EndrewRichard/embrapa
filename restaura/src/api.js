@@ -3,7 +3,7 @@ import json from './grad.json';
 
 export default {
 
-  getDados: async (lat=null, lng=null, address=null) => {
+  getDados: async () => {
     console.log("foi");
 
     

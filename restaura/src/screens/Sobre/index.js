@@ -6,6 +6,14 @@ import { useNavigation } from '@react-navigation/native';
 
 
 export default () => {
+    const navigation = useNavigation();
+    const handleClick = (nome, linkedin, orkut) =>{
+        navigation.navigate('Modal',{
+            nome,
+            linkedin,
+            orkut
+            
+        });}
 
 
       return(
@@ -49,13 +57,9 @@ export default () => {
             
             {'\n'}
 
-
-            <Image 
-              source={require("../../assets/icons-hd/ic_pet_si.png")}
-              style = { styles.image }/>
-              <Text style = { styles.wordBold }>
-               nome do cara
-            </Text>
+        <Text onPress={handleClick()}>
+                nome do cara
+        </Text>
 
 
                   
