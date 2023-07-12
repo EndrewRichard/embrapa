@@ -15,7 +15,10 @@ const Tab = createBottomTabNavigator();
 
 export default() => (
 
-    <Tab.Navigator tabBar={props=><CustomTabBar {...props}/>}>
+    <Tab.Navigator screenOptions={
+            {headerStyle: {backgroundColor: '#02971f'}}
+        }
+        tabBar={props=><CustomTabBar {...props}/>}>
         <Tab.Screen name='Catalogo' component={Catalogo} />
         <Tab.Screen name='Estado' component={Estado} />
         <Tab.Screen name='Favoritos' component={Favoritos} />
